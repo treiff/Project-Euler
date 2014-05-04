@@ -7,7 +7,7 @@ fibonacciArray = [1, 2]
 x = 0
 sum = 0
 
-# Build the Fibonacci Array
+# Build the Fibonacci Array as long as max term in array is less than 4000000
 
 while fibonacciArray.max < 4000000
 
@@ -17,8 +17,13 @@ while fibonacciArray.max < 4000000
 
 end
 
+# Delete off terms from array.
+
 fibonacciArray.delete_if &:odd?
-fibonacciArray.each { |element| sum+=element}
+
+# Sum remaing even array elements and outp the total.
+
+fibonacciArray.each { |element| sum += element}
 puts "The total is " + sum.to_s + "."
 
 	
