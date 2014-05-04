@@ -3,3 +3,22 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 # find the sum of the even-valued terms.
 
+fibonacciArray = [1, 2]
+x = 0
+sum = 0
+
+# Build the Fibonacci Array
+
+while fibonacciArray.max < 4000000
+
+	nextNum = fibonacciArray[x] + fibonacciArray.last
+	fibonacciArray << nextNum
+	x = x + 1
+
+end
+
+fibonacciArray.delete_if &:odd?
+fibonacciArray.each { |element| sum+=element}
+puts "The total is " + sum.to_s + "."
+
+	
