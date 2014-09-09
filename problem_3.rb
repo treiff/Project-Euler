@@ -25,4 +25,4 @@ def prime?
   prime.max
 end
 
-p factor(135_195)
+p factor(600_851_475_143)
